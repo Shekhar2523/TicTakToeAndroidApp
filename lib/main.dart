@@ -22,6 +22,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.orangeAccent,
           title: Center(
             child: Text(
               "Tic-Tak-Toe",
