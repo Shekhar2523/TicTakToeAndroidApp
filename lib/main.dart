@@ -40,9 +40,9 @@ class _MyAppState extends State<MyApp> {
               children: <Widget>[
                 Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amberAccent,child :Text("Player1 Score: $p1",style: TextStyle(fontSize: 15.0)),),),
+                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amber,child :Text("Player1 Score: $p1",style: TextStyle(fontSize: 15.0)),textColor: Colors.pinkAccent,onPressed: (){},),),
                   SizedBox(width: 10.0,),
-                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amberAccent,child :Text("Player2 Score: $p2",style: TextStyle(fontSize: 15.0)),),),
+                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amber,child :Text("Player2 Score: $p2",style: TextStyle(fontSize: 15.0)),textColor: Colors.blueAccent,onPressed: (){},),),
                 ],),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
