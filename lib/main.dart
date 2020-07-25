@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   bool isPlayer1 = true ;
   var gameBoard  = [[0,0,0],[0,0,0],[0,0,0]];
   var win1 = 0,win2 = 0,win3 = 0;
-
+  int p1=0,p2=0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,6 +38,12 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amberAccent,child :Text("Player1 Score: $p1",style: TextStyle(fontSize: 15.0)),),),
+                  SizedBox(width: 10.0,),
+                  SizedBox(width:145.0,height:50.0 ,child: RaisedButton(color: Colors.amberAccent,child :Text("Player2 Score: $p2",style: TextStyle(fontSize: 15.0)),),),
+                ],),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -47,12 +53,14 @@ class _MyAppState extends State<MyApp> {
                         myColor1 = Colors.pinkAccent;
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[0][0] = 2;setState(() {
                         myColor1 = Colors.blueAccent;
                         sign1 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -63,12 +71,14 @@ class _MyAppState extends State<MyApp> {
                         sign2 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[0][1] = 2;setState(() {
                         myColor2 = Colors.blueAccent;
                         sign2 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -79,12 +89,14 @@ class _MyAppState extends State<MyApp> {
                         sign3 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[0][2] = 2;setState(() {
                         myColor3 = Colors.blueAccent;
                         sign3 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -100,12 +112,14 @@ class _MyAppState extends State<MyApp> {
                         sign4 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[1][0] = 2;setState(() {
                         myColor4 = Colors.blueAccent;
                         sign4 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -116,12 +130,14 @@ class _MyAppState extends State<MyApp> {
                         sign5 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[1][1] = 2;setState(() {
                         myColor5 = Colors.blueAccent;
                         sign5 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -132,14 +148,16 @@ class _MyAppState extends State<MyApp> {
                         sign6 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[1][2] = 2;setState(() {
                         myColor6 = Colors.blueAccent;
                         sign6 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
-                    }}),
+                    }else { return null;}}),
                     ),
                   ],
                 ),
@@ -153,12 +171,14 @@ class _MyAppState extends State<MyApp> {
                         sign7 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[2][0] = 2;setState(() {
                         myColor7 = Colors.blueAccent;
                         sign7 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -169,12 +189,14 @@ class _MyAppState extends State<MyApp> {
                         sign8 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[2][1] = 2;setState(() {
                         myColor8 = Colors.blueAccent;
                         sign8 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -185,13 +207,14 @@ class _MyAppState extends State<MyApp> {
                         sign9 = "X";
                       });win1 = horitest(1, gameBoard);win2 = vertitest(1, gameBoard);win3 = diagonaltest(1, gameBoard); if((win1 == 1)||(win2 == 1)||(win3 == 1)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 1 win the game";
+                        p1++;
                       });}isPlayer1 = !isPlayer1;}
                       else{gameBoard[2][2] = 2;setState(() {
                         myColor9 = Colors.blueAccent;
                         sign9 = "O";
                       });win1 = horitest(2, gameBoard);win2 = vertitest(2, gameBoard);win3 = diagonaltest(2, gameBoard); if((win1 == 2)||(win2 == 2)||(win3 == 2)){gameBoard =  [[3,3,3],[3,3,3],[3,3,3]];setState(() {
                         msg = "Player 2 win the game";
-                        
+                        p2++;
                       });}isPlayer1 = !isPlayer1;}
                     }}),
                     ),
@@ -200,16 +223,33 @@ class _MyAppState extends State<MyApp> {
                 SizedBox(height: 20.0),
                 Text("$msg",style: TextStyle(color: Colors.amberAccent,fontFamily: "KronaOne-Regular",fontWeight: FontWeight.bold),),
                 SizedBox(height: 15.0),
-                FlatButton(color : Colors.amber,child : Text("New Game",),onPressed: (){
-                  setState(() {
-                    sign1 = "";sign2 = "";sign3 = "";sign4 = "";sign = "";sign5 = "";sign6 = "";sign7 = "";sign8 = "";sign9 = "";
-                    myColor1 = Colors.redAccent;myColor2 = Colors.redAccent;myColor3 = Colors.redAccent;myColor4 = Colors.redAccent;myColor5 = Colors.redAccent;myColor6 = Colors.redAccent;myColor7 = Colors.redAccent;myColor8 = Colors.redAccent;myColor9 = Colors.redAccent;
-                     msg = "";
-                     isPlayer1 = true ;
-                     gameBoard  = [[0,0,0],[0,0,0],[0,0,0]];
-                     win1 = 0;win2 = 0;win3 = 0;
-                  },);
-                },)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(color : Colors.amber,child : Text("New Game",),onPressed: (){
+                      setState(() {
+                        p1 =0;p2=0;
+                        sign1 = "";sign2 = "";sign3 = "";sign4 = "";sign = "";sign5 = "";sign6 = "";sign7 = "";sign8 = "";sign9 = "";
+                        myColor1 = Colors.redAccent;myColor2 = Colors.redAccent;myColor3 = Colors.redAccent;myColor4 = Colors.redAccent;myColor5 = Colors.redAccent;myColor6 = Colors.redAccent;myColor7 = Colors.redAccent;myColor8 = Colors.redAccent;myColor9 = Colors.redAccent;
+                        msg = "";
+                        isPlayer1 = true ;
+                        gameBoard  = [[0,0,0],[0,0,0],[0,0,0]];
+                        win1 = 0;win2 = 0;win3 = 0;
+                      },);
+                    },),
+                    SizedBox(width: 15.0),
+                    FlatButton(color : Colors.amber,child : Text("Next Match",),onPressed: (){
+                      setState(() {
+                        sign1 = "";sign2 = "";sign3 = "";sign4 = "";sign = "";sign5 = "";sign6 = "";sign7 = "";sign8 = "";sign9 = "";
+                        myColor1 = Colors.redAccent;myColor2 = Colors.redAccent;myColor3 = Colors.redAccent;myColor4 = Colors.redAccent;myColor5 = Colors.redAccent;myColor6 = Colors.redAccent;myColor7 = Colors.redAccent;myColor8 = Colors.redAccent;myColor9 = Colors.redAccent;
+                        msg = "";
+                        isPlayer1 = true ;
+                        gameBoard  = [[0,0,0],[0,0,0],[0,0,0]];
+                        win1 = 0;win2 = 0;win3 = 0;
+                      },);
+                    },)
+                  ],
+                ),
               ],
             ),
           ),
@@ -273,3 +313,7 @@ class _MyAppState extends State<MyApp> {
       return x;
     }
   }
+
+
+
+
