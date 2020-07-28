@@ -17,8 +17,6 @@ class _GameBoardState extends State<GameBoard> {
   @override
   Widget build(BuildContext context) {
 
-
-
     void updatePlayerName(){
       final formKey = GlobalKey<FormState>();
       TextEditingController player1TextEditingController = new TextEditingController();
