@@ -13,7 +13,7 @@ class _GameBoardState extends State<GameBoard> {
   bool isPlayer1 = true ;
   var gameBoard  = [[0,0,0],[0,0,0],[0,0,0]];
   var win1 = 0,win2 = 0,win3 = 0;
-  int p1=0,p2=0;
+  int p1=0, p2=0;
   @override
   Widget build(BuildContext context) {
 
